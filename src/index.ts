@@ -94,6 +94,8 @@ const main = async (): Promise<void> => {
     });
 
     await client.login(process.env.BOT_TOKEN);
+    // eslint-disable-next-line no-console
+    console.log('Logged in');
 };
 
 void main();
