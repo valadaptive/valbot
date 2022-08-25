@@ -24,6 +24,10 @@ const command = async (interaction: Interaction): Promise<void> => {
                 colorRoles.push(role);
             }
         }
+        if (colorRoles.length === 0) {
+            await interaction.reply('There are no color roles in this server');
+            return;
+        }
         colorRoles.sort((a, b) => a.comparePositionTo(b));
         const row = new ActionRowBuilder()
             .addComponents(
